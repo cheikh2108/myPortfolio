@@ -19,7 +19,7 @@ export default function SplashScreen({ onLoadingComplete }) {
   if (!isLoading) return null;
 
   return (
-    <div className={`fixed inset-0 flex items-center justify-center bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 z-9999 overflow-hidden transition-opacity duration-800 splash-screen ${fadeOut ? 'fade-out' : ''}`}>
+    <div className={`fixed inset-0 flex items-center justify-center bg-black z-9999 overflow-hidden transition-opacity duration-800 splash-screen ${fadeOut ? 'fade-out' : ''}`}>
       
       {/* Animated particles */}
       <div className="absolute inset-0 pointer-events-none">
