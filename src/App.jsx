@@ -1,10 +1,8 @@
-import React, { useEffect, useRef, useState, Suspense, lazy } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import TypeWords from './components/TypeWords';
+import WorkCarousel from './components/WorkCarousel';
+import AboutSection from './components/AboutSection';
 import myProfileface from './images/myProfileface.webp';
-
-// Lazy load non-critical components
-const WorkCarousel = lazy(() => import('./components/WorkCarousel'));
-const AboutSection = lazy(() => import('./components/AboutSection'));
 
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -226,9 +224,7 @@ export default function App() {
       </div>
 
       <div className="relative mt-12 md:mt-16">
-        <Suspense fallback={<div className="h-[400px] bg-white/5 rounded-2xl animate-pulse" />}>
-          <WorkCarousel />
-        </Suspense>
+        <WorkCarousel />
       </div>
 
       <section className="z-10 xl:py-24 mt-24 pt-12 pb-12 relative" id="portfolio">
@@ -297,9 +293,7 @@ export default function App() {
         </div>
       </section>
 
-      <Suspense fallback={<div className="h-[600px] bg-white/5 rounded-2xl animate-pulse" />}>
-        <AboutSection />
-      </Suspense>
+      <AboutSection />
 
       <section className="z-10 xl:py-24 bg-[url(https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/92d0c40f-f813-47fd-a53a-5def9c2ca85c_800w.webp)] bg-cover mt-24 pt-12 pb-12 relative" id="services">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
