@@ -7,8 +7,19 @@ import myProfileface from './images/myProfileface.webp';
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeFilter, setActiveFilter] = useState('all');
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const heroContainerRef = useRef(null);
   const heroParallaxRef = useRef(null);
+
+  // Monitor screen size changes
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
     // Setup generic scroll observers for standard sections
@@ -45,7 +56,6 @@ export default function App() {
 
   useEffect(() => {
     // Disable parallax on mobile for performance
-    const isMobile = window.innerWidth < 768;
     if (isMobile) return;
 
     let rafId = 0;
@@ -91,7 +101,7 @@ export default function App() {
       window.removeEventListener('mousemove', onMouseMove);
       if (rafId) window.cancelAnimationFrame(rafId);
     };
-  }, []);
+  }, [isMobile]);
 
   const portfolioItems = [
     { cat: 'product', img: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/70bb19b3-d51f-47a2-8020-6261061a6a14_800w.jpg', title: 'Dashboard SaaS', desc: 'Plateforme web • 2025', tags: ['React', 'API'] },
