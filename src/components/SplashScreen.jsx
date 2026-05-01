@@ -154,7 +154,7 @@ export default function SplashScreen({ onLoadingComplete }) {
         }
       `}</style>
 
-      <div className={`fixed inset-0 flex items-center justify-center bg-gradient-to-br from-slate-950/90 via-slate-900/90 to-slate-950/95 z-9999 overflow-hidden backdrop-blur-md transition-opacity duration-800 splash-screen ${fadeOut ? 'fade-out' : ''}`}>
+      <div className={`fixed inset-0 flex items-center justify-center bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 z-9999 overflow-hidden transition-opacity duration-800 splash-screen ${fadeOut ? 'fade-out' : ''}`}>
         
         {/* Animated particles */}
         <div className="absolute inset-0 pointer-events-none">
@@ -194,12 +194,15 @@ export default function SplashScreen({ onLoadingComplete }) {
           </p>
 
           {/* Loader */}
-          <div className="splash-loader flex justify-center mb-6 sm:mb-8">
+          <div className="splash-loader flex flex-col items-center gap-4 sm:gap-6">
             <div className="relative w-14 h-14 sm:w-16 sm:h-16">
               <div className="loader-ring absolute inset-0 rounded-full" />
               <div className="loader-ring absolute inset-2 rounded-full" />
               <div className="loader-ring absolute inset-4 rounded-full" />
             </div>
+            <p className="text-white text-xs sm:text-sm font-medium tracking-widest">
+              BAYE CHEIKH DIAKHATE
+            </p>
           </div>
 
           {/* Loading text */}
