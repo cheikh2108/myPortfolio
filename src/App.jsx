@@ -44,6 +44,10 @@ export default function App() {
   }, []);
 
   useEffect(() => {
+    // Disable parallax on mobile for performance
+    const isMobile = window.innerWidth < 768;
+    if (isMobile) return;
+
     let rafId = 0;
     let mouseOffsetX = 0;
     let mouseOffsetY = 0;
