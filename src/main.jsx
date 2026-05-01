@@ -7,16 +7,18 @@ import 'iconify-icon'
 function SmoothScrollController() {
   React.useEffect(() => {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    if (prefersReducedMotion) return undefined
+    const isMobile = window.innerWidth < 768
+    
+    // Disable Lenis on mobile - use native scroll for better performance
+    if (prefersReducedMotion || isMobile) return undefined
 
-    // Load Lenis immediately for smooth scroll from start
+    // Load Lenis only on desktop for smooth scroll
     import('lenis').then(({ default: Lenis }) => {
       const lenis = new Lenis({
         smoothWheel: true,
         wheelMultiplier: 0.9,
         touchMultiplier: 1.1,
         lerp: 0.08,
-        syncTouch: false, // Disable on mobile for better native feel
       })
 
       const previousScrollRestoration = window.history.scrollRestoration
