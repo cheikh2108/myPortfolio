@@ -1,8 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react';
-import TypeWords from './components/TypeWords';
-import WorkCarousel from './components/WorkCarousel';
-import AboutSection from './components/AboutSection';
+import React, { useEffect, useRef, useState, Suspense, lazy } from 'react';
 import myProfileface from './images/myProfileface.webp';
+
+// Lazy load heavy components
+const TypeWords = lazy(() => import('./components/TypeWords'));
+const WorkCarousel = lazy(() => import('./components/WorkCarousel'));
+const AboutSection = lazy(() => import('./components/AboutSection'));
 
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -187,10 +189,12 @@ export default function App() {
             </span>
           </h1>
 
-          <TypeWords 
-            text="Développeur fullstack qui transforme des besoins concrets en applications web claires, rapides et fiables."
-            className="max-w-3xl mx-auto text-lg md:text-xl text-white/80"
-          />
+          <Suspense fallback={<div className="h-12" />}>
+            <TypeWords 
+              text="Développeur fullstack qui transforme des besoins concrets en applications web claires, rapides et fiables."
+              className="max-w-3xl mx-auto text-lg md:text-xl text-white/80"
+            />
+          </Suspense>
 
           <div className="mt-10 flex items-center justify-center gap-4">
             <a href="#contact" className="relative inline-flex items-center justify-center gap-2 overflow-hidden transition-all duration-300 hover:ring-sky-400/60 hover:shadow-[0_0_0_1px_rgba(56,189,248,0.35),0_40px_80px_rgba(56,189,248,0.18)] group ring-[#ffffff]/30 ring-1 text-base font-semibold text-white tracking-tight bg-neutral-950/95 rounded-full pt-3 pr-6 pb-3 pl-6 shadow-[0_0_0_1px_rgba(56,189,248,0.25),inset_0_0_0_1px_rgba(255,255,255,0.08)] z-[2]">
@@ -224,7 +228,9 @@ export default function App() {
       </div>
 
       <div className="relative mt-12 md:mt-16">
-        <WorkCarousel />
+        <Suspense fallback={<div className="h-[400px]" />}>
+          <WorkCarousel />
+        </Suspense>
       </div>
 
       <section className="z-10 xl:py-24 mt-24 pt-12 pb-12 relative" id="portfolio">
@@ -293,7 +299,9 @@ export default function App() {
         </div>
       </section>
 
-      <AboutSection />
+      <Suspense fallback={<div className="h-[600px]" />}>
+        <AboutSection />
+      </Suspense>
 
       <section className="z-10 xl:py-24 bg-[url(https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/92d0c40f-f813-47fd-a53a-5def9c2ca85c_800w.webp)] bg-cover mt-24 pt-12 pb-12 relative" id="services">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
