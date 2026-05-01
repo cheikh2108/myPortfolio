@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import TypeWords from './components/TypeWords';
 import WorkCarousel from './components/WorkCarousel';
 import AboutSection from './components/AboutSection';
-import myProfileface from './images/myProfileface.jpeg';
+import myProfileface from './images/myProfileface.webp';
 
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -90,12 +90,12 @@ export default function App() {
   }, []);
 
   const portfolioItems = [
-    { cat: 'product', img: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/70bb19b3-d51f-47a2-8020-6261061a6a14_3840w.jpg', title: 'Dashboard SaaS', desc: 'Plateforme web • 2025', tags: ['React', 'API'] },
+    { cat: 'product', img: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/70bb19b3-d51f-47a2-8020-6261061a6a14_800w.jpg', title: 'Dashboard SaaS', desc: 'Plateforme web • 2025', tags: ['React', 'API'] },
     { cat: 'environment', img: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/a4a67840-05ba-4133-86ca-146954f90c15_800w.webp', title: 'Espace Admin', desc: 'Back-office métier • 2025', tags: ['Node.js', 'Auth'] },
-    { cat: 'motion', img: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/6c42603b-4f4a-422a-9ece-7460e8a24048_3840w.webp', title: 'Déploiement conteneurisé', desc: 'Docker & orchestration • 2024', tags: ['Docker', 'Compose'] },
-    { cat: 'product', img: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/673a4f97-d66d-40c8-a04b-44985ef5577b_3840w.jpg', title: 'Outil métier', desc: 'Application web interne • 2025', tags: ['Fullstack', 'CRUD'] },
+    { cat: 'motion', img: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/6c42603b-4f4a-422a-9ece-7460e8a24048_800w.webp', title: 'Déploiement conteneurisé', desc: 'Docker & orchestration • 2024', tags: ['Docker', 'Compose'] },
+    { cat: 'product', img: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/673a4f97-d66d-40c8-a04b-44985ef5577b_800w.jpg', title: 'Outil métier', desc: 'Application web interne • 2025', tags: ['Fullstack', 'CRUD'] },
     { cat: 'character', img: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/541e199d-de17-4765-8fca-71b804cb9fb3_800w.webp', title: 'Portail utilisateur', desc: 'Expérience utilisateur • 2024', tags: ['Design system', 'DX'] },
-    { cat: 'environment', img: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/a4517a7d-638f-43bf-87fb-315a5f0690ff_3840w.webp', title: 'Tableau de bord', desc: 'Visibilité des données • 2025', tags: ['Data', 'Charts'] }
+    { cat: 'environment', img: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/a4517a7d-638f-43bf-87fb-315a5f0690ff_800w.webp', title: 'Tableau de bord', desc: 'Visibilité des données • 2025', tags: ['Data', 'Charts'] }
   ];
 
   return (
@@ -295,7 +295,7 @@ export default function App() {
 
       <AboutSection />
 
-      <section className="z-10 xl:py-24 bg-[url(https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/92d0c40f-f813-47fd-a53a-5def9c2ca85c_3840w.webp)] bg-cover mt-24 pt-12 pb-12 relative" id="services">
+      <section className="z-10 xl:py-24 bg-[url(https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/92d0c40f-f813-47fd-a53a-5def9c2ca85c_800w.webp)] bg-cover mt-24 pt-12 pb-12 relative" id="services">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl animate-on-scroll" style={{ animation: 'fadeSlideIn 0.5s ease-in-out 0.1s both' }}>
             <div className="inline-flex gap-2 border-gradient before:rounded-full bg-white/5 rounded-full px-3 py-1.5 backdrop-blur items-center">

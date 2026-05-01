@@ -21,23 +21,26 @@ html.lenis body {
 }
 
 @keyframes fadeSlideIn {
-  0% { opacity: 0; transform: translateY(30px); filter: blur(8px); }
-  100% { opacity: 1; transform: translateY(0); filter: blur(0px); }
+  0% { opacity: 0; transform: translate3d(0, 30px, 0); }
+  100% { opacity: 1; transform: translate3d(0, 0, 0); }
 }
 
 @keyframes portraitFall {
-  0% { opacity: 0; transform: translateY(-200px) scale(0.5) rotate(-10deg); filter: blur(4px); }
-  60% { opacity: 1; transform: translateY(8px) scale(1.05) rotate(2deg); filter: blur(0px); }
-  80% { transform: translateY(-4px) scale(0.98) rotate(-1deg); }
-  100% { opacity: 1; transform: translateY(0) scale(1) rotate(0deg); filter: blur(0px); }
+  0% { opacity: 0; transform: translate3d(0, -200px, 0) scale(0.5) rotate(-10deg); }
+  60% { opacity: 1; transform: translate3d(0, 8px, 0) scale(1.05) rotate(2deg); }
+  80% { transform: translate3d(0, -4px, 0) scale(0.98) rotate(-1deg); }
+  100% { opacity: 1; transform: translate3d(0, 0, 0) scale(1) rotate(0deg); }
 }
 
 @keyframes titleEmergence {
-  0% { opacity: 0; transform: translateY(40px); filter: blur(12px); }
-  100% { opacity: 1; transform: translateY(0); filter: blur(0px); }
+  0% { opacity: 0; transform: translate3d(0, 40px, 0); }
+  100% { opacity: 1; transform: translate3d(0, 0, 0); }
 }
 
-.animate-on-scroll { animation-play-state: paused !important; }
+.animate-on-scroll { 
+  animation-play-state: paused !important;
+  will-change: opacity, transform;
+}
 .animate-on-scroll.animate { animation-play-state: running !important; }
 
 .skip-link {
@@ -143,13 +146,14 @@ button:disabled {
 }
 
 @keyframes word-reveal {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translate3d(0, 20px, 0); }
+  to { opacity: 1; transform: translate3d(0, 0, 0); }
 }
 .type-words .w {
   display: inline-block; opacity: 0;
   animation: word-reveal var(--dur) var(--ease) forwards;
   animation-delay: calc(var(--delay) + var(--i) * var(--stagger));
+  will-change: opacity, transform;
 }
 .type-words:not(.is-in) .w { animation-name: none; }
 
