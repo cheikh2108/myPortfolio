@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import SplashScreen from './components/SplashScreen';
 import TypeWords from './components/TypeWords';
 import WorkCarousel from './components/WorkCarousel';
 import AboutSection from './components/AboutSection';
@@ -8,6 +9,7 @@ export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeFilter, setActiveFilter] = useState('all');
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [showSplash, setShowSplash] = useState(true);
   const heroContainerRef = useRef(null);
   const heroParallaxRef = useRef(null);
 
@@ -114,6 +116,8 @@ export default function App() {
 
   return (
     <>
+      {showSplash && <SplashScreen onLoadingComplete={() => setShowSplash(false)} />}
+      
       <a href="#main-content" className="skip-link">Skip to content</a>
 
       <div className="gradient-blur">
