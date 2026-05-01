@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState, Suspense, lazy } from 'react';
+import TypeWords from './components/TypeWords';
 import myProfileface from './images/myProfileface.webp';
 
-// Lazy load heavy components
-const TypeWords = lazy(() => import('./components/TypeWords'));
+// Lazy load non-critical components
 const WorkCarousel = lazy(() => import('./components/WorkCarousel'));
 const AboutSection = lazy(() => import('./components/AboutSection'));
 
@@ -189,12 +189,10 @@ export default function App() {
             </span>
           </h1>
 
-          <Suspense fallback={<div className="h-12" />}>
-            <TypeWords 
-              text="Développeur fullstack qui transforme des besoins concrets en applications web claires, rapides et fiables."
-              className="max-w-3xl mx-auto text-lg md:text-xl text-white/80"
-            />
-          </Suspense>
+          <TypeWords 
+            text="Développeur fullstack qui transforme des besoins concrets en applications web claires, rapides et fiables."
+            className="max-w-3xl mx-auto text-lg md:text-xl text-white/80"
+          />
 
           <div className="mt-10 flex items-center justify-center gap-4">
             <a href="#contact" className="relative inline-flex items-center justify-center gap-2 overflow-hidden transition-all duration-300 hover:ring-sky-400/60 hover:shadow-[0_0_0_1px_rgba(56,189,248,0.35),0_40px_80px_rgba(56,189,248,0.18)] group ring-[#ffffff]/30 ring-1 text-base font-semibold text-white tracking-tight bg-neutral-950/95 rounded-full pt-3 pr-6 pb-3 pl-6 shadow-[0_0_0_1px_rgba(56,189,248,0.25),inset_0_0_0_1px_rgba(255,255,255,0.08)] z-[2]">

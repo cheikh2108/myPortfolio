@@ -9,8 +9,9 @@ function SmoothScrollController() {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     if (prefersReducedMotion) return undefined
 
-    // Defer Lenis loading until after initial paint
-    const lenisTimer = setTimeout(() => {
+    // Load Lenis after First Paint (not First Contentful Paint)
+    // This ensures smooth scrolling from the start with minimal delay
+    const lenisTimer = requestIdleCallback(() => {
       import('lenis').then(({ default: Lenis }) => {
         const lenis = new Lenis({
           smoothWheel: true,
@@ -53,9 +54,11 @@ function SmoothScrollController() {
           lenis.destroy()
         }
       })
-    }, 1500) // Defer Lenis initialization until after initial render
+    }, { timeout: 2000 }) // Max 2s wait
     
-    return () => clearTimeout(lenisTimer)
+    return () => {
+      if (lenisTimer) cancelIdleCallback(lenisTimer)
+    }
   }, [])
 
   return null
