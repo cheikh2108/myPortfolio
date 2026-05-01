@@ -307,6 +307,8 @@ section:not(:first-of-type) {
 .loader-ring {
   border: 2px solid transparent;
   will-change: transform;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
 }
 
 .loader-ring:nth-child(1) {
