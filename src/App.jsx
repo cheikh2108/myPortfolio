@@ -226,7 +226,7 @@ export default function App() {
       </div>
 
       <div className="relative mt-12 md:mt-16">
-        <Suspense fallback={<div className="h-[400px]" />}>
+        <Suspense fallback={<div className="h-[400px] bg-white/5 rounded-2xl animate-pulse" />}>
           <WorkCarousel />
         </Suspense>
       </div>
@@ -297,7 +297,7 @@ export default function App() {
         </div>
       </section>
 
-      <Suspense fallback={<div className="h-[600px]" />}>
+      <Suspense fallback={<div className="h-[600px] bg-white/5 rounded-2xl animate-pulse" />}>
         <AboutSection />
       </Suspense>
 
