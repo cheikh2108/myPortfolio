@@ -3,77 +3,100 @@ import React, { useEffect, useState } from 'react';
 export default function SplashScreen({ onLoadingComplete }) {
   const [isLoading, setIsLoading] = useState(true);
   const [fadeOut, setFadeOut] = useState(false);
-  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    // Simulate progress
-    const progressInterval = setInterval(() => {
-      setProgress(prev => {
-        if (prev >= 90) return prev;
-        return prev + Math.random() * 40;
-      });
-    }, 200);
-
     const timer = setTimeout(() => {
-      setProgress(100);
       setFadeOut(true);
       setTimeout(() => {
         setIsLoading(false);
         onLoadingComplete?.();
-      }, 800);
-    }, 2800);
+      }, 1000);
+    }, 3200);
 
-    return () => {
-      clearInterval(progressInterval);
-      clearTimeout(timer);
-    };
+    return () => clearTimeout(timer);
   }, [onLoadingComplete]);
 
   if (!isLoading) return null;
 
-  return (
-    <div className={`fixed inset-0 flex flex-col items-center justify-center bg-black z-9999 overflow-hidden transition-opacity duration-800 splash-screen ${fadeOut ? 'fade-out' : ''}`}>
-      
-      {/* Gradient orb background */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-purple-600/20 to-indigo-600/20 rounded-full blur-3xl" />
-      </div>
+  const firstName = 'Baye Cheikh';
+  const lastName = 'Diakhate';
+  const subtitle = 'Developer • Builder • Creator';
 
-      {/* Main Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center flex-1 px-6">
+  return (
+    <div className={`fixed inset-0 z-9999 overflow-hidden transition-opacity duration-1000 premium-loader ${fadeOut ? 'loader-fade-out' : ''}`}>
+      {/* Solid Black Background - 100% Opaque */}
+      <div className="absolute inset-0 bg-black" />
+
+      {/* Subtle gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-900/20 via-black to-black pointer-events-none" />
+
+      {/* Premium Content Container */}
+      <div className="relative z-10 flex flex-col items-center justify-center h-full px-6">
         
-        {/* Premium Text Reveal Animation */}
-        <h1 className="text-center">
-          {/* Brand/Text with letter reveal */}
-          <div className="inline-block">
-            <span className="block text-6xl sm:text-7xl lg:text-8xl font-black tracking-tighter mb-3 overflow-hidden">
-              {'YOYO'.split('').map((letter, i) => (
+        {/* Decorative top line */}
+        <div className="premium-top-line mb-12" />
+
+        {/* Main Content */}
+        <div className="text-center">
+          {/* First Name */}
+          <h1 className="overflow-hidden">
+            <div className="inline-block">
+              {firstName.split('').map((char, i) => (
                 <span
-                  key={i}
-                  className="inline-block premium-letter"
+                  key={`first-${i}`}
+                  className="inline-block premium-char"
                   style={{
-                    animationDelay: `${i * 0.1}s`,
+                    animationDelay: `${i * 0.04}s`,
                   }}
                 >
-                  {letter}
+                  {char === ' ' ? '\u00A0' : char}
                 </span>
               ))}
-            </span>
-            <div className="h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent premium-line mb-6" />
-            <p className="text-xs sm:text-sm tracking-[0.3em] text-white/70 premium-subtitle">
-              Experience Design
-            </p>
-          </div>
-        </h1>
+            </div>
+          </h1>
+
+          {/* Last Name */}
+          <h2 className="overflow-hidden">
+            <div className="inline-block">
+              {lastName.split('').map((char, i) => (
+                <span
+                  key={`last-${i}`}
+                  className="inline-block premium-char"
+                  style={{
+                    animationDelay: `${(firstName.length + 1 + i) * 0.04}s`,
+                  }}
+                >
+                  {char === ' ' ? '\u00A0' : char}
+                </span>
+              ))}
+            </div>
+          </h2>
+
+          {/* Decorative divider line */}
+          <div className="premium-divider my-8" />
+
+          {/* Subtitle */}
+          <p className="premium-subtitle text-xs sm:text-sm tracking-[0.3em] text-white/70 uppercase">
+            {subtitle.split('').map((char, i) => (
+              <span
+                key={`subtitle-${i}`}
+                className="inline-block premium-char-subtitle"
+                style={{
+                  animationDelay: `${(firstName.length + lastName.length + 2 + i) * 0.02}s`,
+                }}
+              >
+                {char === ' ' ? '\u00A0' : char}
+              </span>
+            ))}
+          </p>
+        </div>
+
+        {/* Decorative bottom line */}
+        <div className="premium-bottom-line mt-12" />
       </div>
 
-      {/* Progress Bar - Bottom */}
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-black/50">
-        <div 
-          className="h-full bg-gradient-to-r from-purple-500 via-indigo-400 to-cyan-400 transition-all duration-300 ease-out"
-          style={{ width: `${progress}%` }}
-        />
-      </div>
+      {/* Subtle progress indicator at bottom */}
+      <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-purple-500 to-transparent loader-progress" />
     </div>
   );
 }
