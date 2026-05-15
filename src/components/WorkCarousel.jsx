@@ -10,7 +10,7 @@ const cardsData = [
     link: "https://mystudyplanner.appwrite.network/"
   },
   {
-    image: "/src/images/tacko-menu.jpeg",
+    image: "/src/images/tackodelices-hero-section.jpeg",
     icon: "solar:restaurant-linear",
     category: "Product • Restaurant",
     title: "Tacko Délices",
