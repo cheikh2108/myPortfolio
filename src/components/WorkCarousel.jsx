@@ -2,11 +2,12 @@ import React from 'react';
 
 const cardsData = [
   {
-    image: "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/591d6a3f-93a6-4185-a67b-d397be21fd6a_1600w.jpg",
+    image: "/src/images/study-planner-dashboard.jpeg",
     icon: "solar:monitor-linear",
-    category: "Web App • Dashboard",
-    title: "Admin Analytics",
-    desc: "Tableau de bord pour piloter les métriques clés"
+    category: "Web App • Planner",
+    title: "MyStudyPlanner",
+    desc: "Gestion de tâches académiques • 2026",
+    link: "https://mystudyplanner.appwrite.network/"
   },
   {
     image: "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/103e9b5d-1921-4cd5-a80d-9445881f318d_1600w.webp",
@@ -87,7 +88,7 @@ export default function WorkCarousel() {
                           {card.desc}
                         </p>
                       </div>
-                      <a href="#contact" className="inline-flex items-center justify-center rounded-full bg-white/10 hover:bg-white/15 transition ring-1 ring-white/20 backdrop-blur px-3.5 py-2" aria-label={`Open ${card.title} project details`}>
+                      <a href={card.link || '#contact'} target={card.link ? '_blank' : undefined} rel={card.link ? 'noopener noreferrer' : undefined} className="inline-flex items-center justify-center rounded-full bg-white/10 hover:bg-white/15 transition ring-1 ring-white/20 backdrop-blur px-3.5 py-2" aria-label={`Open ${card.title} project details`}>
                         <iconify-icon icon="solar:arrow-right-up-linear" width="20" height="20"></iconify-icon>
                       </a>
                     </div>
