@@ -99,10 +99,10 @@ export default function WorkCarousel() {
                     </div>
                     <div className="mt-2.5 flex items-end justify-between gap-3">
                       <div>
-                        <h3 className="text-xl md:text-2xl lg:text-[28px] font-semibold tracking-tight">
+                        <h3 className="text-base sm:text-lg md:text-2xl lg:text-[28px] font-semibold tracking-tight">
                           {card.title}
                         </h3>
-                        <p className="text-sm md:text-base text-white/70">
+                        <p className="text-xs sm:text-sm md:text-base text-white/70">
                           {card.desc}
                         </p>
                       </div>
