@@ -34,6 +34,14 @@ const cardsData = [
     // no external site link
   },
   {
+    image: "/src/images/vote-hero.jpeg",
+    icon: "solar:voting-linear",
+    category: "Product • E-voting",
+    title: "Plateforme-vote",
+    desc: "Système électoral sécurisé, anonyme et tracé pour étudiants • 2026",
+    link: "https://plateforme-vote.vercel.app",
+  },
+  {
     image: "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/103e9b5d-1921-4cd5-a80d-9445881f318d_1600w.webp",
     icon: "solar:server-linear",
     category: "Backend • API",
