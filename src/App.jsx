@@ -184,8 +184,8 @@ export default function App() {
           </div>
         </header>
 
-        <section className="min-h-screen flex flex-col section-visible text-center pt-0 pr-6 pb-24 pl-6 relative items-center justify-center xl:pt-0 xl:pb-0">
-          <h1 className="leading-[0.95] font-semibold text-white tracking-tight mt-0 mb-0 pt-24 pb-12" style={{ animation: 'titleEmergence 1.8s ease-out both' }}>
+        <section className="min-h-screen flex flex-col section-visible text-center px-6 relative items-center justify-center pt-24 pb-12">
+          <h1 className="leading-[0.95] font-semibold text-white tracking-tight pb-8" style={{ animation: 'titleEmergence 1.8s ease-out both' }}>
             <span className="block text-[10vw] sm:text-7xl lg:text-8xl text-center">
               <span className="flex w-full items-center justify-center gap-4 sm:gap-6">
                 <img src={myProfileface} alt="Portrait de Baye Cheikh Diakhate" className="w-[10vw] h-[10vw] sm:w-[70px] sm:h-[70px] lg:w-[90px] lg:h-[90px] rounded-full object-cover border-2 border-white/20 shadow-2xl" style={{ animation: 'portraitFall 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) 0.8s both' }} fetchPriority="high" decoding="async" />
@@ -215,7 +215,7 @@ export default function App() {
             </div>
           </div>
 
-          <div className="flex flex-wrap xl:py-24 text-xs text-white/60 mt-8 pt-24 pb-24 gap-x-6 gap-y-6 items-center justify-center" style={{ animation: 'fadeSlideIn 0.5s ease-in-out 0.5s both' }}>
+          <div className="flex flex-wrap text-xs text-white/60 mt-16 xl:mt-24 gap-x-6 gap-y-6 items-center justify-center" style={{ animation: 'fadeSlideIn 0.5s ease-in-out 0.5s both' }}>
             <span className="inline-flex items-center gap-1.5">
               <iconify-icon icon="solar:clock-circle-linear" width="16" height="16" class="text-white"></iconify-icon>
               2+ ans d’expérience
