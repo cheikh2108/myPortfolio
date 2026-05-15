@@ -46,7 +46,7 @@ const cardsData = [
     icon: "solar:checklist-minimalistic-linear",
     category: "Product • Task Manager",
     title: "TodoList",
-    desc: "Application de tâches claire et rapide avec Appwrite • 2026",
+    desc: "Application de tâches claire et rapide • 2026",
     badge: "FIRST PROJECT",
     link: "https://todolist-react.appwrite.network",
   }
