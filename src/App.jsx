@@ -301,9 +301,8 @@ export default function App() {
                           </a>
                         )}
                         {item.site && (
-                          <a href={item.site} target="_blank" rel="noopener noreferrer" className="text-xs px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 text-white/80 transition inline-flex items-center gap-1">
-                            <iconify-icon icon="solar:link-linear" width="14" height="14"></iconify-icon>
-                            Voir le site
+                          <a href={item.site} target="_blank" rel="noopener noreferrer" aria-label={`Ouvrir le site de ${item.title}`} className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white/80 transition shrink-0">
+                            <iconify-icon icon="solar:arrow-right-linear" width="16" height="16"></iconify-icon>
                           </a>
                         )}
                       </div>
