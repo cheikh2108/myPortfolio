@@ -26,6 +26,14 @@ const cardsData = [
     link: "https://djifashion.com/",
   },
   {
+    image: "/src/images/cloud-dashboard.jpeg",
+    icon: "solar:cloud-linear",
+    category: "DevOps • Mini-Cloud",
+    title: "Arsonry Local Cloud",
+    desc: "Mini-cloud interne avec services réseau et gestion de fichiers",
+    // no external site link
+  },
+  {
     image: "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/103e9b5d-1921-4cd5-a80d-9445881f318d_1600w.webp",
     icon: "solar:server-linear",
     category: "Backend • API",
