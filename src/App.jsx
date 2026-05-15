@@ -275,7 +275,7 @@ export default function App() {
                   className={`portfolio-item rounded-2xl overflow-hidden border border-white/10 bg-white/5 transition-all duration-300 ${isVisible ? 'scale-100 opacity-100' : 'scale-90 opacity-0 hidden'}`}
                   style={{ animation: `fadeSlideIn 0.5s ease-in-out ${0.2 + idx * 0.05}s both` }}
                 >
-                  <img src={item.img} alt={item.title} className="w-full aspect-square object-cover object-center" loading="lazy" decoding="async" />
+                  <img src={item.img} alt={item.title} className="w-full aspect-square object-cover object-left" loading="lazy" decoding="async" />
                   <div className="portfolio-overlay">
                     <h3 className="text-lg font-semibold">{item.title}</h3>
                     <div className="flex gap-2 mt-3">
