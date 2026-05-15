@@ -104,7 +104,7 @@ export default function App() {
   }, [isMobile]);
 
   const portfolioItems = [
-    { cat: 'product', img: '/src/images/tackodelices-hero-section.jpeg', title: 'Tacko Délices', desc: 'Application web de restaurant avec gestion en temps réel • 2024', tags: ['React 19', 'Supabase'], github: 'https://github.com/cheikh2108/Tacko-delices', site: 'https://www.tackodelices.foo' },
+    { cat: 'product', img: '/src/images/tackodelices-hero-section.jpeg', title: 'Tacko Délices', desc: 'Application web de restaurant avec gestion en temps réel • 2026', tags: ['React 19', 'Supabase'], github: 'https://github.com/cheikh2108/Tacko-delices', site: 'https://www.tackodelices.foo' },
     { cat: 'product', img: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/a4a67840-05ba-4133-86ca-146954f90c15_800w.webp', title: 'Espace Admin', desc: 'Back-office métier • 2025', tags: ['Node.js', 'Auth'] },
     { cat: 'product', img: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/6c42603b-4f4a-422a-9ece-7460e8a24048_800w.webp', title: 'Déploiement conteneurisé', desc: 'Docker & orchestration • 2024', tags: ['Docker', 'Compose'] },
     { cat: 'product', img: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/673a4f97-d66d-40c8-a04b-44985ef5577b_800w.jpg', title: 'Outil métier', desc: 'Application web interne • 2025', tags: ['Fullstack', 'CRUD'] },
@@ -278,7 +278,6 @@ export default function App() {
                   <img src={item.img} alt={item.title} className="w-full aspect-square object-cover object-center" loading="lazy" decoding="async" />
                   <div className="portfolio-overlay">
                     <h3 className="text-lg font-semibold">{item.title}</h3>
-                    <p className="text-xs text-white/60 mt-1">{item.desc}</p>
                     <div className="flex gap-2 mt-3">
                       {item.tags.map(tag => (
                         <span key={tag} className="text-xs px-2 py-1 rounded-full bg-white/10 text-white/80">{tag}</span>
