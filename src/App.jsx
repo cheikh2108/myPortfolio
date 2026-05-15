@@ -138,7 +138,7 @@ export default function App() {
         <header className="fixed z-20 bg-black/50 w-full top-0 backdrop-blur-xl" style={{ animation: 'fadeSlideIn 0.5s ease-in-out 0.1s both' }}>
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="flex items-center justify-between py-6 border-b border-white/[0.06]">
-              <a href="#main-content" className="flex items-center gap-3">
+              <a href="/" className="flex items-center gap-3">
                 <span className="text-xl font-semibold tracking-tight">Baye Cheikh Diakhate</span>
               </a>
               <button 
