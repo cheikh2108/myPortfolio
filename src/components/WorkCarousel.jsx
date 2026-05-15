@@ -83,7 +83,7 @@ export default function WorkCarousel() {
                   }}
                 >
                   <img src={card.image} alt={card.title} className="absolute inset-0 h-full w-full object-cover" loading="lazy" decoding="async" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent md:from-black/70 md:via-black/10"></div>
                   {card.badge && (
                     <div className="absolute right-4 top-4 z-[2] rounded-full bg-amber-300 px-3 py-1 text-[10px] font-bold tracking-[0.12em] text-black">
                       {card.badge}
