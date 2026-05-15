@@ -2,7 +2,7 @@ import React from 'react';
 
 const cardsData = [
   {
-    image: "/src/images/tackodelices-hero-section.jpeg",
+    image: "/src/images/tackodelices-hero-section.webp",
     icon: "solar:restaurant-linear",
     category: "Product • Restaurant",
     title: "Tacko Délices",
@@ -10,7 +10,7 @@ const cardsData = [
     link: "https://www.tackodelices.foo",
   },
   {
-    image: "/src/images/djifashion-hero.jpeg",
+    image: "/src/images/djifashion-hero.webp",
     icon: "solar:bag-linear",
     category: "WordPress • E-commerce",
     title: "Djifashion",
@@ -18,7 +18,7 @@ const cardsData = [
     link: "https://djifashion.com/",
   },
   {
-    image: "/src/images/study-planner-dashboard.jpeg",
+    image: "/src/images/study-planner-dashboard.webp",
     icon: "solar:monitor-linear",
     category: "Web App • Planner",
     title: "MyStudyPlanner",
@@ -26,7 +26,7 @@ const cardsData = [
     link: "https://mystudyplanner.appwrite.network/"
   },
   {
-    image: "/src/images/vote-hero.jpeg",
+    image: "/src/images/vote-hero.webp",
     icon: "solar:voting-linear",
     category: "Product • E-voting",
     title: "Plateforme-vote",
@@ -34,7 +34,7 @@ const cardsData = [
     link: "https://plateforme-vote.vercel.app",
   },
   {
-    image: "/src/images/cloud-dashboard.jpeg",
+    image: "/src/images/cloud-dashboard.webp",
     icon: "solar:cloud-linear",
     category: "DevOps • Mini-Cloud",
     title: "Arsonry Local Cloud",
@@ -42,7 +42,7 @@ const cardsData = [
     // no external site link
   },
   {
-    image: "/src/images/todolist.jpeg",
+    image: "/src/images/todolist.webp",
     icon: "solar:checklist-minimalistic-linear",
     category: "Product • Task Manager",
     title: "TodoList",
