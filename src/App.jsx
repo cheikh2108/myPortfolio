@@ -292,19 +292,12 @@ export default function App() {
                         <span key={tag} className="text-xs px-2 py-1 rounded-full bg-white/10 text-white/80">{tag}</span>
                       ))}
                     </div>
-                    {(item.github || item.site) && (
-                      <div className="mt-4 flex items-end justify-between gap-3">
-                        {item.github && (
-                          <a href={item.github} target="_blank" rel="noopener noreferrer" className="text-xs px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 text-white/80 transition inline-flex items-center gap-1">
-                            <iconify-icon icon="simple-icons:github" width="14" height="14"></iconify-icon>
-                            GitHub
-                          </a>
-                        )}
-                        {item.site && (
-                          <a href={item.site} target="_blank" rel="noopener noreferrer" aria-label={`Ouvrir le site de ${item.title}`} className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/15 hover:bg-white/25 text-white/90 transition shrink-0 ml-auto shadow-lg shadow-black/30">
-                            <iconify-icon icon="solar:arrow-right-linear" width="16" height="16"></iconify-icon>
-                          </a>
-                        )}
+                    {item.github && (
+                      <div className="mt-4 pt-3 border-t border-white/20">
+                        <a href={item.github} target="_blank" rel="noopener noreferrer" className="text-xs px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 text-white/80 transition inline-flex items-center gap-1">
+                          <iconify-icon icon="simple-icons:github" width="14" height="14"></iconify-icon>
+                          GitHub
+                        </a>
                       </div>
                     )}
                   </div>
