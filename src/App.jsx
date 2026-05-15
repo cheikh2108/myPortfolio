@@ -104,12 +104,12 @@ export default function App() {
   }, [isMobile]);
 
   const portfolioItems = [
-    { cat: 'product', img: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/70bb19b3-d51f-47a2-8020-6261061a6a14_800w.jpg', title: 'Dashboard SaaS', desc: 'Plateforme web • 2025', tags: ['React', 'API'] },
-    { cat: 'environment', img: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/a4a67840-05ba-4133-86ca-146954f90c15_800w.webp', title: 'Espace Admin', desc: 'Back-office métier • 2025', tags: ['Node.js', 'Auth'] },
-    { cat: 'motion', img: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/6c42603b-4f4a-422a-9ece-7460e8a24048_800w.webp', title: 'Déploiement conteneurisé', desc: 'Docker & orchestration • 2024', tags: ['Docker', 'Compose'] },
+    { cat: 'product', img: '/src/images/tackodelices-hero-section.jpeg', title: 'Tacko Délices', desc: 'Application web de restaurant avec gestion en temps réel • 2024', tags: ['React 19', 'TypeScript', 'Tailwind v4', 'GSAP', 'Supabase'], github: 'https://github.com/cheikh2108/Tacko-delices', site: 'https://www.tackodelices.foo' },
+    { cat: 'product', img: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/a4a67840-05ba-4133-86ca-146954f90c15_800w.webp', title: 'Espace Admin', desc: 'Back-office métier • 2025', tags: ['Node.js', 'Auth'] },
+    { cat: 'product', img: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/6c42603b-4f4a-422a-9ece-7460e8a24048_800w.webp', title: 'Déploiement conteneurisé', desc: 'Docker & orchestration • 2024', tags: ['Docker', 'Compose'] },
     { cat: 'product', img: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/673a4f97-d66d-40c8-a04b-44985ef5577b_800w.jpg', title: 'Outil métier', desc: 'Application web interne • 2025', tags: ['Fullstack', 'CRUD'] },
-    { cat: 'character', img: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/541e199d-de17-4765-8fca-71b804cb9fb3_800w.webp', title: 'Portail utilisateur', desc: 'Expérience utilisateur • 2024', tags: ['Design system', 'DX'] },
-    { cat: 'environment', img: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/a4517a7d-638f-43bf-87fb-315a5f0690ff_800w.webp', title: 'Tableau de bord', desc: 'Visibilité des données • 2025', tags: ['Data', 'Charts'] }
+    { cat: 'product', img: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/541e199d-de17-4765-8fca-71b804cb9fb3_800w.webp', title: 'Portail utilisateur', desc: 'Expérience utilisateur • 2026', tags: ['Design system', 'DX'] },
+    { cat: 'product', img: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/a4517a7d-638f-43bf-87fb-315a5f0690ff_800w.webp', title: 'Tableau de bord', desc: 'Visibilité des données • 2025', tags: ['Data', 'Charts'] }
   ];
 
   return (
@@ -252,7 +252,7 @@ export default function App() {
           </div>
 
           <div className="flex flex-wrap gap-3 mt-10 animate-on-scroll" style={{ animation: 'fadeSlideIn 0.5s ease-in-out 0.15s both' }}>
-            {['all', 'product', 'character', 'environment', 'motion'].map((filter) => (
+            {['all', 'product'].map((filter) => (
               <button 
                 key={filter}
                 onClick={() => setActiveFilter(filter)}
@@ -262,9 +262,6 @@ export default function App() {
               >
                 {filter === 'all' && 'Tous'}
                 {filter === 'product' && 'Applications web'}
-                {filter === 'character' && 'APIs & backend'}
-                {filter === 'environment' && 'UI & UX'}
-                {filter === 'motion' && 'Docker'}
               </button>
             ))}
           </div>
@@ -287,6 +284,22 @@ export default function App() {
                         <span key={tag} className="text-xs px-2 py-1 rounded-full bg-white/10 text-white/80">{tag}</span>
                       ))}
                     </div>
+                    {(item.github || item.site) && (
+                      <div className="flex gap-2 mt-4 pt-3 border-t border-white/20">
+                        {item.github && (
+                          <a href={item.github} target="_blank" rel="noopener noreferrer" className="text-xs px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 text-white/80 transition inline-flex items-center gap-1">
+                            <iconify-icon icon="simple-icons:github" width="14" height="14"></iconify-icon>
+                            GitHub
+                          </a>
+                        )}
+                        {item.site && (
+                          <a href={item.site} target="_blank" rel="noopener noreferrer" className="text-xs px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 text-white/80 transition inline-flex items-center gap-1">
+                            <iconify-icon icon="solar:link-linear" width="14" height="14"></iconify-icon>
+                            Voir le site
+                          </a>
+                        )}
+                      </div>
+                    )}
                   </div>
                 </div>
               );
