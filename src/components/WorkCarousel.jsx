@@ -49,34 +49,6 @@ const cardsData = [
     title: "Plateforme-vote",
     desc: "Système électoral sécurisé, anonyme et tracé pour étudiants • 2026",
     link: "https://plateforme-vote.vercel.app",
-  },
-  {
-    image: "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/103e9b5d-1921-4cd5-a80d-9445881f318d_1600w.webp",
-    icon: "solar:server-linear",
-    category: "Backend • API",
-    title: "Service Connect",
-    desc: "API sécurisée pour synchroniser les données"
-  },
-  {
-    image: "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/564dc5fb-0d4e-42cb-9136-c3b630185122_1600w.webp",
-    icon: "solar:palette-linear",
-    category: "UI • Design System",
-    title: "Interface Kit",
-    desc: "Composants cohérents pour accélérer le développement"
-  },
-  {
-    image: "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/49aac4dd-9624-4c88-ab00-4c68f0f0bfe8_1600w.jpg",
-    icon: "solar:code-square-linear",
-    category: "Fullstack • Product",
-    title: "Client Portal",
-    desc: "Espace client pour gérer les demandes et le suivi"
-  },
-  {
-    image: "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/6d030941-0aa9-425b-908f-655b1984c946_1600w.jpg",
-    icon: "solar:shield-check-linear",
-    category: "Performance • Quality",
-    title: "Core Stack",
-    desc: "Base technique stable, testée et maintenable"
   }
 ];
 
@@ -89,7 +61,7 @@ export default function WorkCarousel() {
             Aperçu de projets web
           </h2>
           <p className="text-base md:text-lg text-white/70 mt-4">
-            Une sélection de réalisations orientées produit, backend et expérience utilisateur.
+            Une sélection de réalisations réelles orientées produit, e-commerce et DevOps.
           </p>
         </div>
         
