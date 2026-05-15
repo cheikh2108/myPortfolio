@@ -26,13 +26,12 @@ const cardsData = [
     link: "https://mystudyplanner.appwrite.network/"
   },
   {
-    image: "/src/images/todolist.jpeg",
-    icon: "solar:checklist-minimalistic-linear",
-    category: "Product • Task Manager",
-    title: "TodoList",
-    desc: "Application de tâches claire et rapide avec Appwrite • 2026",
-    badge: "FIRST PROJECT",
-    link: "https://todolist-react.appwrite.network",
+    image: "/src/images/vote-hero.jpeg",
+    icon: "solar:voting-linear",
+    category: "Product • E-voting",
+    title: "Plateforme-vote",
+    desc: "Système électoral sécurisé, anonyme et tracé pour étudiants • 2026",
+    link: "https://plateforme-vote.vercel.app",
   },
   {
     image: "/src/images/cloud-dashboard.jpeg",
@@ -43,12 +42,13 @@ const cardsData = [
     // no external site link
   },
   {
-    image: "/src/images/vote-hero.jpeg",
-    icon: "solar:voting-linear",
-    category: "Product • E-voting",
-    title: "Plateforme-vote",
-    desc: "Système électoral sécurisé, anonyme et tracé pour étudiants • 2026",
-    link: "https://plateforme-vote.vercel.app",
+    image: "/src/images/todolist.jpeg",
+    icon: "solar:checklist-minimalistic-linear",
+    category: "Product • Task Manager",
+    title: "TodoList",
+    desc: "Application de tâches claire et rapide avec Appwrite • 2026",
+    badge: "FIRST PROJECT",
+    link: "https://todolist-react.appwrite.network",
   }
 ];
 
