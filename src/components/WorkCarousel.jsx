@@ -2,6 +2,22 @@ import React from 'react';
 
 const cardsData = [
   {
+    image: "/src/images/tackodelices-hero-section.jpeg",
+    icon: "solar:restaurant-linear",
+    category: "Product • Restaurant",
+    title: "Tacko Délices",
+    desc: "Site & gestion commande en temps réel • 2026",
+    link: "https://www.tackodelices.foo",
+  },
+  {
+    image: "/src/images/djifashion-hero.jpeg",
+    icon: "solar:bag-linear",
+    category: "WordPress • E-commerce",
+    title: "Djifashion",
+    desc: "Boutique mode avec catalogue et paiement sécurisé • 2026",
+    link: "https://djifashion.com/",
+  },
+  {
     image: "/src/images/study-planner-dashboard.jpeg",
     icon: "solar:monitor-linear",
     category: "Web App • Planner",
@@ -17,22 +33,6 @@ const cardsData = [
     desc: "Application de tâches claire et rapide avec Appwrite • 2026",
     badge: "FIRST PROJECT",
     link: "https://todolist-react.appwrite.network",
-  },
-  {
-    image: "/src/images/tackodelices-hero-section.jpeg",
-    icon: "solar:restaurant-linear",
-    category: "Product • Restaurant",
-    title: "Tacko Délices",
-    desc: "Site & gestion commande en temps réel • 2026",
-    link: "https://www.tackodelices.foo",
-  },
-  {
-    image: "/src/images/djifashion-hero.jpeg",
-    icon: "solar:bag-linear",
-    category: "WordPress • E-commerce",
-    title: "DJI Fashion",
-    desc: "Boutique mode avec catalogue et paiement sécurisé • 2026",
-    link: "https://djifashion.com/",
   },
   {
     image: "/src/images/cloud-dashboard.jpeg",
