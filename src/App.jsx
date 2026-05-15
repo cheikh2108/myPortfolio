@@ -524,8 +524,8 @@ export default function App() {
               <a href="https://x.com/CheikhDev21" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-white transition">
                 <iconify-icon icon="simple-icons:x" width="16" height="16"></iconify-icon> Twitter
               </a>
-              <a href="https://www.tiktok.com/@cheikhoodx" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-white transition">
-                <iconify-icon icon="simple-icons:tiktok" width="16" height="16"></iconify-icon> TikTok
+              <a href="https://github.com/cheikh2108" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-white transition">
+                <iconify-icon icon="simple-icons:github" width="16" height="16"></iconify-icon> GitHub
               </a>
             </div>
           </div>
@@ -553,8 +553,8 @@ export default function App() {
                   <a href="https://x.com/CheikhDev21" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-white/5 hover:bg-white/10 transition border border-white/10" aria-label="X profile">
                     <iconify-icon icon="simple-icons:x" width="16" height="16"></iconify-icon>
                   </a>
-                  <a href="https://www.tiktok.com/@cheikhoodx" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-white/5 hover:bg-white/10 transition border border-white/10" aria-label="TikTok profile">
-                    <iconify-icon icon="simple-icons:tiktok" width="16" height="16"></iconify-icon>
+                  <a href="https://github.com/cheikh2108" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-white/5 hover:bg-white/10 transition border border-white/10" aria-label="GitHub profile">
+                    <iconify-icon icon="simple-icons:github" width="16" height="16"></iconify-icon>
                   </a>
                 </div>
               </div>
