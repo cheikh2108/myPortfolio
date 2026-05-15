@@ -104,7 +104,7 @@ export default function App() {
   }, [isMobile]);
 
   const portfolioItems = [
-    { cat: 'product', img: '/src/images/tackodelices-hero-section.jpeg', title: 'Tacko Délices', desc: 'Application web de restaurant avec gestion en temps réel • 2024', tags: ['React 19', 'TypeScript', 'Tailwind v4', 'GSAP', 'Supabase'], github: 'https://github.com/cheikh2108/Tacko-delices', site: 'https://www.tackodelices.foo' },
+    { cat: 'product', img: '/src/images/tackodelices-hero-section.jpeg', title: 'Tacko Délices', desc: 'Application web de restaurant avec gestion en temps réel • 2024', tags: ['React 19', 'Supabase'], github: 'https://github.com/cheikh2108/Tacko-delices', site: 'https://www.tackodelices.foo' },
     { cat: 'product', img: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/a4a67840-05ba-4133-86ca-146954f90c15_800w.webp', title: 'Espace Admin', desc: 'Back-office métier • 2025', tags: ['Node.js', 'Auth'] },
     { cat: 'product', img: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/6c42603b-4f4a-422a-9ece-7460e8a24048_800w.webp', title: 'Déploiement conteneurisé', desc: 'Docker & orchestration • 2024', tags: ['Docker', 'Compose'] },
     { cat: 'product', img: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/673a4f97-d66d-40c8-a04b-44985ef5577b_800w.jpg', title: 'Outil métier', desc: 'Application web interne • 2025', tags: ['Fullstack', 'CRUD'] },
@@ -275,7 +275,7 @@ export default function App() {
                   className={`portfolio-item rounded-2xl overflow-hidden border border-white/10 bg-white/5 transition-all duration-300 ${isVisible ? 'scale-100 opacity-100' : 'scale-90 opacity-0 hidden'}`}
                   style={{ animation: `fadeSlideIn 0.5s ease-in-out ${0.2 + idx * 0.05}s both` }}
                 >
-                  <img src={item.img} alt={item.title} className="w-full aspect-square object-cover" loading="lazy" decoding="async" />
+                  <img src={item.img} alt={item.title} className="w-full aspect-square object-cover object-center" loading="lazy" decoding="async" />
                   <div className="portfolio-overlay">
                     <h3 className="text-lg font-semibold">{item.title}</h3>
                     <p className="text-xs text-white/60 mt-1">{item.desc}</p>
