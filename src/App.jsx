@@ -3,6 +3,12 @@ import TypeWords from './components/TypeWords';
 import WorkCarousel from './components/WorkCarousel';
 import AboutSection from './components/AboutSection';
 import myProfileface from './images/myProfileface.webp';
+import studyMatiere from './images/study-matiere.webp';
+import todolist from './images/todolist.webp';
+import tackoMenu from './images/tacko-menu.webp';
+import difashionCollection from './images/difashion-collection.webp';
+import cloudFichier from './images/cloud-fichier.webp';
+import voteSection from './images/vote-section.webp';
 
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -104,12 +110,12 @@ export default function App() {
   }, [isMobile]);
 
   const portfolioItems = [
-    { cat: 'product', img: '/src/images/study-matiere.webp', title: 'MyStudyPlanner', desc: 'Gestion de tâches académiques • 2026', tags: ['React', 'Vite', 'Tailwind'], github: 'https://github.com/cheikh2108/MyStudyPlanner', site: 'https://mystudyplanner.appwrite.network/' },
-    { cat: 'product', img: '/src/images/todolist.webp', title: 'TodoList', desc: 'Application de gestion de tâches simple, rapide et responsive • 2026', tags: ['First Project', 'React', 'Appwrite'], github: 'https://github.com/cheikh2108/todolist-react', site: 'https://todolist-react.appwrite.network' },
-    { cat: 'product', img: '/src/images/tacko-menu.webp', title: 'Tacko Délices', desc: 'Application web de restaurant avec gestion en temps réel • 2026', tags: ['React', 'Supabase'], github: 'https://github.com/cheikh2108/Tacko-delices', site: 'https://www.tackodelices.foo' },
-    { cat: 'wordpress', img: '/src/images/difashion-collection.webp', title: 'DJI Fashion', desc: 'Boutique mode élégante avec catalogue produits, gestion panier et paiement sécurisé • 2026', tags: ['WordPress', 'WooCommerce', 'E-commerce'], site: 'https://djifashion.com/' },
-    { cat: 'devops', img: '/src/images/cloud-fichier.webp', title: 'Arsonry Local Cloud', desc: 'Système de mini-cloud interne fournissant DNS, SMB, FTP, HTTP, bases de données et interface de gestion de fichiers avec quotas.', tags: ['Docker', 'DevOps'], github: 'https://github.com/ibzocraft/arsonry-local-cloud' },
-    { cat: 'product', img: '/src/images/vote-section.webp', title: 'Plateforme-vote', desc: 'Plateforme électorale sécurisée et anonyme pour les établissements avec vérification d’accès, scrutin anonyme et suivi administratif en temps réel • 2026', tags: ['Next.js', 'TypeScript', 'Supabase'], github: 'https://github.com/cheikh2108/Plateforme-vote', site: 'https://plateforme-vote.vercel.app' }
+    { cat: 'product', img: studyMatiere, title: 'MyStudyPlanner', desc: 'Gestion de tâches académiques • 2026', tags: ['React', 'Vite', 'Tailwind'], github: 'https://github.com/cheikh2108/MyStudyPlanner', site: 'https://mystudyplanner.appwrite.network/' },
+    { cat: 'product', img: todolist, title: 'TodoList', desc: 'Application de gestion de tâches simple, rapide et responsive • 2026', tags: ['First Project', 'React', 'Appwrite'], github: 'https://github.com/cheikh2108/todolist-react', site: 'https://todolist-react.appwrite.network' },
+    { cat: 'product', img: tackoMenu, title: 'Tacko Délices', desc: 'Application web de restaurant avec gestion en temps réel • 2026', tags: ['React', 'Supabase'], github: 'https://github.com/cheikh2108/Tacko-delices', site: 'https://www.tackodelices.foo' },
+    { cat: 'wordpress', img: difashionCollection, title: 'DJI Fashion', desc: 'Boutique mode élégante avec catalogue produits, gestion panier et paiement sécurisé • 2026', tags: ['WordPress', 'WooCommerce', 'E-commerce'], site: 'https://djifashion.com/' },
+    { cat: 'devops', img: cloudFichier, title: 'Arsonry Local Cloud', desc: 'Système de mini-cloud interne fournissant DNS, SMB, FTP, HTTP, bases de données et interface de gestion de fichiers avec quotas.', tags: ['Docker', 'DevOps'], github: 'https://github.com/ibzocraft/arsonry-local-cloud' },
+    { cat: 'product', img: voteSection, title: 'Plateforme-vote', desc: 'Plateforme électorale sécurisée et anonyme pour les établissements avec vérification d’accès, scrutin anonyme et suivi administratif en temps réel • 2026', tags: ['Next.js', 'TypeScript', 'Supabase'], github: 'https://github.com/cheikh2108/Plateforme-vote', site: 'https://plateforme-vote.vercel.app' }
   ];
 
   const portfolioFilters = [

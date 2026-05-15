@@ -1,8 +1,14 @@
 import React from 'react';
+import tackodelicesHero from '../images/tackodelices-hero-section.webp';
+import djifashionHero from '../images/djifashion-hero.webp';
+import studyPlannerDashboard from '../images/study-planner-dashboard.webp';
+import voteHero from '../images/vote-hero.webp';
+import cloudDashboard from '../images/cloud-dashboard.webp';
+import todolistImage from '../images/todolist.webp';
 
 const cardsData = [
   {
-    image: "/src/images/tackodelices-hero-section.webp",
+    image: tackodelicesHero,
     icon: "solar:restaurant-linear",
     category: "Product • Restaurant",
     title: "Tacko Délices",
@@ -10,7 +16,7 @@ const cardsData = [
     link: "https://www.tackodelices.foo",
   },
   {
-    image: "/src/images/djifashion-hero.webp",
+    image: djifashionHero,
     icon: "solar:bag-linear",
     category: "WordPress • E-commerce",
     title: "Djifashion",
@@ -18,7 +24,7 @@ const cardsData = [
     link: "https://djifashion.com/",
   },
   {
-    image: "/src/images/study-planner-dashboard.webp",
+    image: studyPlannerDashboard,
     icon: "solar:monitor-linear",
     category: "Web App • Planner",
     title: "MyStudyPlanner",
@@ -26,7 +32,7 @@ const cardsData = [
     link: "https://mystudyplanner.appwrite.network/"
   },
   {
-    image: "/src/images/vote-hero.webp",
+    image: voteHero,
     icon: "solar:voting-linear",
     category: "Product • E-voting",
     title: "Plateforme-vote",
@@ -34,7 +40,7 @@ const cardsData = [
     link: "https://plateforme-vote.vercel.app",
   },
   {
-    image: "/src/images/cloud-dashboard.webp",
+    image: cloudDashboard,
     icon: "solar:cloud-linear",
     category: "DevOps • Mini-Cloud",
     title: "Arsonry Local Cloud",
@@ -42,7 +48,7 @@ const cardsData = [
     // no external site link
   },
   {
-    image: "/src/images/todolist.webp",
+    image: todolistImage,
     icon: "solar:checklist-minimalistic-linear",
     category: "Product • Task Manager",
     title: "TodoList",
