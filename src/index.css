@@ -135,7 +135,7 @@ button:disabled {
 .portfolio-item:hover img { transform: scale(1.05); filter: brightness(1.1); }
 .portfolio-overlay {
   position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 40%, rgba(0,0,0,0) 70%);
-  opacity: 1; transition: opacity 0.4s ease; display: flex; flex-direction: column; justify-content: flex-end; padding: 1.5rem;
+  opacity: 0; transition: opacity 0.4s ease; display: flex; flex-direction: column; justify-content: flex-end; padding: 1.5rem;
 }
 .portfolio-item:hover .portfolio-overlay { opacity: 1; }
 .portfolio-item:focus-within .portfolio-overlay { opacity: 1; }

@@ -278,6 +278,7 @@ export default function App() {
                   <img src={item.img} alt={item.title} className="w-full aspect-square object-cover object-center" loading="lazy" decoding="async" />
                   <div className="portfolio-overlay">
                     <h3 className="text-lg font-semibold">{item.title}</h3>
+                    <p className="text-xs text-white/60 mt-1">{item.desc}</p>
                     <div className="flex gap-2 mt-3">
                       {item.tags.map(tag => (
                         <span key={tag} className="text-xs px-2 py-1 rounded-full bg-white/10 text-white/80">{tag}</span>
