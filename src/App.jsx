@@ -185,11 +185,6 @@ export default function App() {
         </header>
 
         <section className="min-h-screen flex flex-col section-visible text-center pt-0 pr-6 pb-24 pl-6 relative items-center justify-center xl:pt-0 xl:pb-0">
-          <div className="inline-flex items-center gap-2 rounded-full bg-white/8 px-4 py-2 backdrop-blur-sm text-white/80 ring-1 ring-white/10 animate-badge">
-            <iconify-icon icon="solar:code-square-linear" width="16" height="16"></iconify-icon>
-            <span>Développeur fullstack orienté produits</span>
-          </div>
-
           <h1 className="leading-[0.95] font-semibold text-white tracking-tight mt-0 mb-0 pt-24 pb-12" style={{ animation: 'titleEmergence 1.8s ease-out both' }}>
             <span className="block text-[10vw] sm:text-7xl lg:text-8xl text-center">
               <span className="flex w-full items-center justify-center gap-4 sm:gap-6">
