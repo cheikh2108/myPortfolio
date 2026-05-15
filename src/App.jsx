@@ -104,12 +104,22 @@ export default function App() {
   }, [isMobile]);
 
   const portfolioItems = [
-    { cat: 'product', img: '/src/images/tackodelices-hero-section.jpeg', title: 'Tacko Délices', desc: 'Application web de restaurant avec gestion en temps réel • 2026', tags: ['React 19', 'Supabase'], github: 'https://github.com/cheikh2108/Tacko-delices', site: 'https://www.tackodelices.foo' },
-    { cat: 'product', img: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/a4a67840-05ba-4133-86ca-146954f90c15_800w.webp', title: 'Espace Admin', desc: 'Back-office métier • 2025', tags: ['Node.js', 'Auth'] },
-    { cat: 'product', img: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/6c42603b-4f4a-422a-9ece-7460e8a24048_800w.webp', title: 'Déploiement conteneurisé', desc: 'Docker & orchestration • 2024', tags: ['Docker', 'Compose'] },
-    { cat: 'product', img: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/673a4f97-d66d-40c8-a04b-44985ef5577b_800w.jpg', title: 'Outil métier', desc: 'Application web interne • 2025', tags: ['Fullstack', 'CRUD'] },
-    { cat: 'product', img: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/541e199d-de17-4765-8fca-71b804cb9fb3_800w.webp', title: 'Portail utilisateur', desc: 'Expérience utilisateur • 2026', tags: ['Design system', 'DX'] },
-    { cat: 'product', img: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/a4517a7d-638f-43bf-87fb-315a5f0690ff_800w.webp', title: 'Tableau de bord', desc: 'Visibilité des données • 2025', tags: ['Data', 'Charts'] }
+    { cat: 'product', img: '/src/images/tackodelices-hero-section.jpeg', title: 'Tacko Délices', desc: 'Application web de restaurant avec gestion en temps réel • 2026', tags: ['React', 'Supabase'], github: 'https://github.com/cheikh2108/Tacko-delices', site: 'https://www.tackodelices.foo' },
+    { cat: 'backend', img: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/a4a67840-05ba-4133-86ca-146954f90c15_800w.webp', title: 'Espace Admin', desc: 'Back-office métier • 2025', tags: ['Node.js', 'Auth'] },
+    { cat: 'devops', img: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/6c42603b-4f4a-422a-9ece-7460e8a24048_800w.webp', title: 'Déploiement conteneurisé', desc: 'Docker & orchestration • 2024', tags: ['Docker', 'Compose'] },
+    { cat: 'tool', img: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/673a4f97-d66d-40c8-a04b-44985ef5577b_800w.jpg', title: 'Outil métier', desc: 'Application web interne • 2025', tags: ['Fullstack', 'CRUD'] },
+    { cat: 'portal', img: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/541e199d-de17-4765-8fca-71b804cb9fb3_800w.webp', title: 'Portail utilisateur', desc: 'Expérience utilisateur • 2026', tags: ['Design system', 'DX'] },
+    { cat: 'dashboard', img: 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/a4517a7d-638f-43bf-87fb-315a5f0690ff_800w.webp', title: 'Tableau de bord', desc: 'Visibilité des données • 2025', tags: ['Data', 'Charts'] }
+  ];
+
+  const portfolioFilters = [
+    { value: 'all', label: 'Tous' },
+    { value: 'product', label: 'Applications web' },
+    { value: 'backend', label: 'APIs & backend' },
+    { value: 'devops', label: 'Docker & déploiement' },
+    { value: 'tool', label: 'Outils métier' },
+    { value: 'portal', label: 'Portails' },
+    { value: 'dashboard', label: 'Dashboards' }
   ];
 
   return (
@@ -252,16 +262,15 @@ export default function App() {
           </div>
 
           <div className="flex flex-wrap gap-3 mt-10 animate-on-scroll" style={{ animation: 'fadeSlideIn 0.5s ease-in-out 0.15s both' }}>
-            {['all', 'product'].map((filter) => (
+            {portfolioFilters.map((filter) => (
               <button 
-                key={filter}
-                onClick={() => setActiveFilter(filter)}
-                className={`filter-btn px-4 py-2 rounded-full border border-white/10 text-sm transition ${activeFilter === filter ? 'active bg-white/10 text-white/80' : 'bg-white/5 text-white/60 hover:bg-white/10'}`}
-                aria-pressed={activeFilter === filter}
+                key={filter.value}
+                onClick={() => setActiveFilter(filter.value)}
+                className={`filter-btn px-4 py-2 rounded-full border border-white/10 text-sm transition ${activeFilter === filter.value ? 'active bg-white/10 text-white/80' : 'bg-white/5 text-white/60 hover:bg-white/10'}`}
+                aria-pressed={activeFilter === filter.value}
                 type="button"
               >
-                {filter === 'all' && 'Tous'}
-                {filter === 'product' && 'Applications web'}
+                {filter.label}
               </button>
             ))}
           </div>
