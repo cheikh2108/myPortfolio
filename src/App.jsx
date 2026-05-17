@@ -509,7 +509,7 @@ export default function App() {
                 Démarrer un projet
                 <iconify-icon icon="solar:letter-linear" width="16" height="16"></iconify-icon>
               </a>
-              <a href="https://cal.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 border-gradient before:rounded-full hover:bg-white/10 transition text-sm font-medium text-white/80 bg-white/5 rounded-full px-6 py-3">
+              <a href="https://cal.com/cheikhoodx/15min" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 border-gradient before:rounded-full hover:bg-white/10 transition text-sm font-medium text-white/80 bg-white/5 rounded-full px-6 py-3">
                 Planifier un échange
                 <iconify-icon icon="solar:calendar-linear" width="16" height="16"></iconify-icon>
               </a>
