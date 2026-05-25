@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import TypeWords from './components/TypeWords';
-import WorkCarousel from './components/WorkCarousel';
 import AboutSection from './components/AboutSection';
 import myProfileface from './images/myProfileface.webp';
 import studyMatiere from './images/study-matiere.webp';
@@ -135,17 +134,10 @@ export default function App() {
 
       <main id="main-content">
       <div ref={heroContainerRef} className="overflow-hidden relative" id="top">
-        <div ref={heroParallaxRef} className="hero-parallax-layer absolute inset-0 -z-10 pointer-events-none hue-rotate-15 blur-sm">
-          <iframe
-            src="https://my.spline.design/retrofuturismbganimation-Lb3VtL1bNaYUnirKNzn0FvaW"
-            frameBorder="0"
-            width="100%"
-            height="100%"
-            title="Decorative animated background"
-            loading="lazy"
-            aria-hidden="true"
-            tabIndex={-1}
-          ></iframe>
+        <div ref={heroParallaxRef} className="hero-parallax-layer absolute inset-0 -z-10 pointer-events-none overflow-hidden" aria-hidden="true">
+          <div className="hero-orb" style={{ width: '70vw', height: '70vw', maxWidth: 900, maxHeight: 900, top: '-20%', left: '-15%', background: 'radial-gradient(circle, rgba(56,189,248,0.18) 0%, rgba(99,102,241,0.12) 40%, transparent 70%)', animation: 'orbFloat1 18s ease-in-out infinite' }}></div>
+          <div className="hero-orb" style={{ width: '55vw', height: '55vw', maxWidth: 700, maxHeight: 700, top: '10%', right: '-10%', background: 'radial-gradient(circle, rgba(168,85,247,0.16) 0%, rgba(99,102,241,0.1) 45%, transparent 70%)', animation: 'orbFloat2 22s ease-in-out infinite' }}></div>
+          <div className="hero-orb" style={{ width: '40vw', height: '40vw', maxWidth: 560, maxHeight: 560, bottom: '-10%', left: '30%', background: 'radial-gradient(circle, rgba(34,211,238,0.13) 0%, rgba(56,189,248,0.08) 50%, transparent 70%)', animation: 'orbFloat3 26s ease-in-out infinite' }}></div>
         </div>
 
         <header className="fixed z-20 bg-black/50 w-full top-0 backdrop-blur-xl" style={{ animation: 'fadeSlideIn 0.5s ease-in-out 0.1s both' }}>
@@ -165,10 +157,9 @@ export default function App() {
                 <iconify-icon icon="solar:hamburger-menu-linear" width="24" height="24"></iconify-icon>
               </button>
               <nav className="hidden lg:flex items-center gap-8 text-sm text-white/70" aria-label="Main navigation">
-                <a href="#portfolio" className="hover:text-white transition">Projets</a>
                 <a href="#about" className="hover:text-white transition">À propos</a>
+                <a href="#portfolio" className="hover:text-white transition">Projets</a>
                 <a href="#services" className="hover:text-white transition">Services</a>
-                <a href="#process" className="hover:text-white transition">Process</a>
                 <a href="#skills" className="hover:text-white transition">Skills</a>
                 <a href="#contact" className="hover:text-white transition">Contact</a>
               </nav>
@@ -182,10 +173,9 @@ export default function App() {
             
             <nav id="mobile-menu" aria-label="Mobile navigation" className={`lg:hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-xl border-b border-white/10 overflow-hidden transition-all duration-300 ${mobileMenuOpen ? 'max-h-[400px]' : 'max-h-0'}`}>
               <div className="flex flex-col p-6 space-y-4">
-                <a href="#portfolio" onClick={() => setMobileMenuOpen(false)} className="text-base text-white/70 hover:text-white transition py-2">Projets</a>
                 <a href="#about" onClick={() => setMobileMenuOpen(false)} className="text-base text-white/70 hover:text-white transition py-2">À propos</a>
+                <a href="#portfolio" onClick={() => setMobileMenuOpen(false)} className="text-base text-white/70 hover:text-white transition py-2">Projets</a>
                 <a href="#services" onClick={() => setMobileMenuOpen(false)} className="text-base text-white/70 hover:text-white transition py-2">Services</a>
-                <a href="#process" onClick={() => setMobileMenuOpen(false)} className="text-base text-white/70 hover:text-white transition py-2">Process</a>
                 <a href="#skills" onClick={() => setMobileMenuOpen(false)} className="text-base text-white/70 hover:text-white transition py-2">Skills</a>
                 <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="text-base text-white/70 hover:text-white transition py-2">Contact</a>
                 <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="inline-flex items-center justify-center gap-2 border-gradient before:rounded-full text-sm font-medium text-white/80 bg-white/5 rounded-full px-5 py-3 mt-2">
@@ -201,11 +191,11 @@ export default function App() {
           <h1 className="leading-[0.95] font-semibold text-white tracking-tight pb-8" style={{ animation: 'titleEmergence 1.8s ease-out both' }}>
             <span className="block text-[10vw] sm:text-7xl lg:text-8xl text-center">
               <span className="flex w-full items-center justify-center gap-4 sm:gap-6">
-                <img src={myProfileface} alt="Portrait de Baye Cheikh Diakhate" className="w-[10vw] h-[10vw] sm:w-[70px] sm:h-[70px] lg:w-[90px] lg:h-[90px] rounded-full object-cover border-2 border-white/20 shadow-2xl" style={{ animation: 'portraitFall 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) 0.8s both' }} fetchPriority="high" decoding="async" />
-                <span>Creation</span>
+                <img src={myProfileface} alt="Portrait de Baye Cheikh Diakhate" className="w-[10vw] h-[10vw] sm:w-[70px] sm:h-[70px] lg:w-[90px] lg:h-[90px] rounded-full object-cover border-2 border-white/20 shadow-2xl" style={{ animation: 'portraitFall 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) 0.8s both' }} fetchpriority="high" decoding="async" />
+                <span>Création</span>
               </span>
               <span className="block w-full text-white/85 animate-shimmer-mask [--shine:220%]">applications web</span>
-              <span className="block w-full">mobiles</span>
+              <span className="block w-full"> et mobiles</span>
             </span>
           </h1>
 
@@ -217,7 +207,7 @@ export default function App() {
           <div className="mt-10 flex items-center justify-center gap-4">
             <a href="#contact" className="relative inline-flex items-center justify-center gap-2 overflow-hidden transition-all duration-300 hover:ring-sky-400/60 hover:shadow-[0_0_0_1px_rgba(56,189,248,0.35),0_40px_80px_rgba(56,189,248,0.18)] group ring-[#ffffff]/30 ring-1 text-base font-semibold text-white tracking-tight bg-neutral-950/95 rounded-full pt-3 pr-6 pb-3 pl-6 shadow-[0_0_0_1px_rgba(56,189,248,0.25),inset_0_0_0_1px_rgba(255,255,255,0.08)] z-[2]">
               <span className="z-[1] group-hover:translate-x-1 transition-transform duration-300 relative">Voir mes projets</span>
-              <span aria-hidden="true" className="pointer-events-none absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300" style={{ background: 'linear-gradient(45deg, rgba(56,189,248,0.8) 0%, rgba(99,102,241,0.8) 50%, rgba(168,85,247,0.8) 100%)', animation: 'pulse 2s ease-in-out infinite' }}></span>
+              <span aria-hidden="true" className="pointer-events-none absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300" style={{ background: 'linear-gradient(45deg, rgba(56,189,248,0.8) 0%, rgba(99,102,241,0.8) 50%, rgba(168,85,247,0.8) 100%)' }}></span>
               <span aria-hidden="true" className="pointer-events-none absolute inset-0 rounded-full" style={{ boxShadow: '0 0 0 1px rgba(56,189,248,0.45), 0 18px 60px rgba(56,189,248,0.25)', background: 'radial-gradient(140% 160% at 50% -20%, rgba(56,189,248,0.22) 0%, rgba(56,189,248,0.08) 35%, rgba(56,189,248,0.00) 60%)' }}></span>
             </a>
             <div className="inline-block group relative">
@@ -245,9 +235,7 @@ export default function App() {
         </section>
       </div>
 
-      <div className="relative mt-12 md:mt-16">
-        <WorkCarousel />
-      </div>
+      <AboutSection />
 
       <section className="z-10 xl:py-24 mt-24 pt-12 pb-12 relative" id="portfolio">
         <div className="container lg:px-8 max-w-7xl mr-auto ml-auto pr-6 pl-6">
@@ -290,19 +278,26 @@ export default function App() {
                   <img src={item.img} alt={item.title} className="w-full aspect-square object-cover object-left" loading="lazy" decoding="async" />
                   <div className="portfolio-overlay">
                     <h3 className="text-lg font-semibold">{item.title}</h3>
-                    <div className="flex gap-2 mt-3">
+                    <p className="text-xs text-white/60 mt-1 leading-relaxed">{item.desc}</p>
+                    <div className="flex flex-wrap gap-2 mt-3">
                       {item.tags.map(tag => (
                         <span key={tag} className="text-xs px-2 py-1 rounded-full bg-white/10 text-white/80">{tag}</span>
                       ))}
                     </div>
-                    {item.github && (
-                      <div className="mt-4 pt-3 border-t border-white/20">
+                    <div className="mt-4 pt-3 border-t border-white/20 flex gap-2 flex-wrap">
+                      {item.site && (
+                        <a href={item.site} target="_blank" rel="noopener noreferrer" className="text-xs px-3 py-1.5 rounded-full bg-white/15 hover:bg-white/25 text-white transition inline-flex items-center gap-1">
+                          <iconify-icon icon="solar:arrow-right-up-linear" width="14" height="14"></iconify-icon>
+                          Voir le site
+                        </a>
+                      )}
+                      {item.github && (
                         <a href={item.github} target="_blank" rel="noopener noreferrer" className="text-xs px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 text-white/80 transition inline-flex items-center gap-1">
                           <iconify-icon icon="simple-icons:github" width="14" height="14"></iconify-icon>
                           GitHub
                         </a>
-                      </div>
-                    )}
+                      )}
+                    </div>
                   </div>
                 </div>
               );
@@ -310,15 +305,13 @@ export default function App() {
           </div>
 
           <div className="text-center mt-12 animate-on-scroll" style={{ animation: 'fadeSlideIn 0.5s ease-in-out 0.5s both' }}>
-            <a href="#contact" className="inline-flex items-center gap-2 border-gradient before:rounded-full hover:bg-white/10 transition text-sm font-medium text-white/80 bg-white/5 rounded-full px-6 py-3">
+            <a href="https://github.com/cheikh2108" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 border-gradient before:rounded-full hover:bg-white/10 transition text-sm font-medium text-white/80 bg-white/5 rounded-full px-6 py-3">
               Voir tout le portfolio
-              <iconify-icon icon="solar:export-linear" width="16" height="16"></iconify-icon>
+              <iconify-icon icon="simple-icons:github" width="16" height="16"></iconify-icon>
             </a>
           </div>
         </div>
       </section>
-
-      <AboutSection />
 
       <section className="z-10 xl:py-24 bg-[url(https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/92d0c40f-f813-47fd-a53a-5def9c2ca85c_800w.webp)] bg-cover mt-24 pt-12 pb-12 relative" id="services">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -396,43 +389,6 @@ export default function App() {
               <div className="mt-4 flex flex-wrap gap-2">
                 {['Support', 'Évolutions', 'Stabilité'].map(t => <span key={t} className="text-xs px-2 py-1 rounded-full bg-white/5 text-white/60">{t}</span>)}
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="pt-24 pb-24 relative" id="process">
-        <div className="lg:px-8 max-w-5xl mr-auto ml-auto pr-6 pl-6">
-          <div className="text-center mb-16 animate-on-scroll" style={{ animation: 'fadeSlideIn 0.5s ease-in-out 0.1s both' }}>
-            <div className="inline-flex items-center gap-2 bg-white/5 backdrop-blur-xl border-gradient before:rounded-full rounded-full px-4 py-2 mb-6">
-              <iconify-icon icon="solar:route-linear" width="16" height="16" class="text-white-400"></iconify-icon>
-              <span className="text-xs text-white/70 font-medium">Mon processus</span>
-            </div>
-            <h2 className="text-4xl md:text-6xl font-semibold tracking-tight">De l’idée à la mise en ligne</h2>
-            <p className="text-white/70 mt-4 text-lg">Un workflow clair pour livrer des applications web solides, utiles et performantes.</p>
-          </div>
-
-          <div className="relative">
-            <div className="absolute left-5 top-12 bottom-12 w-px bg-gradient-to-b from-blue-500 to-cyan-500/0 hidden md:block"></div>
-            <div className="space-y-6">
-              {[
-                { step: 1, title: 'Compréhension du besoin', desc: "Analyse du projet, des objectifs, des contraintes et du contexte métier pour cadrer la bonne solution." },
-                { step: 2, title: 'Conception', desc: "Définition de la structure, des fonctionnalités et de l’expérience utilisateur avant d’écrire la moindre ligne de code." },
-                { step: 3, title: 'Développement', desc: "Construction de l’application avec un focus sur la performance, la lisibilité du code et la robustesse." },
-                { step: 4, title: 'Tests & livraison', desc: "Correction des bugs, optimisation et mise en ligne de la solution avec accompagnement si nécessaire." }
-              ].map((item, idx) => (
-                <div key={item.step} className="relative animate-on-scroll" style={{ animation: `fadeSlideIn 0.5s ease-in-out ${0.15 + idx * 0.05}s both` }}>
-                  <div className="flex gap-5 items-start">
-                    <div className="flex-shrink-0 flex z-10 bg-gradient-to-br from-blue-500 to-cyan-500 w-10 h-10 rounded-full relative items-center justify-center">
-                      <span className="text-base font-bold">{item.step}</span>
-                    </div>
-                    <div className="flex-1 rounded-2xl bg-white/5 backdrop-blur-xl border-gradient before:rounded-2xl p-6">
-                      <h3 className="text-xl font-semibold tracking-tight mb-2">{item.title}</h3>
-                      <p className="text-white/60 leading-relaxed text-sm">{item.desc}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
         </div>
@@ -562,11 +518,10 @@ export default function App() {
               <div>
                 <h3 className="text-sm font-semibold text-white mb-4">Quick Links</h3>
                 <ul className="space-y-3">
-                  <li><a href="#portfolio" className="text-sm text-white/60 hover:text-white transition">Projets</a></li>
                   <li><a href="#about" className="text-sm text-white/60 hover:text-white transition">À propos</a></li>
+                  <li><a href="#portfolio" className="text-sm text-white/60 hover:text-white transition">Projets</a></li>
                   <li><a href="#skills" className="text-sm text-white/60 hover:text-white transition">Skills</a></li>
                   <li><a href="#services" className="text-sm text-white/60 hover:text-white transition">Services</a></li>
-                  <li><a href="#process" className="text-sm text-white/60 hover:text-white transition">Process</a></li>
                   <li><a href="#contact" className="text-sm text-white/60 hover:text-white transition">Contact</a></li>
                 </ul>
               </div>
