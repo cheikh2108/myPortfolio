@@ -482,7 +482,7 @@ export default function App() {
               <h3 className="text-xl font-semibold text-white tracking-tight">Performance & Qualité</h3>
               <p className="mt-2 text-sm text-white/70">Optimisation des performances, qualité du code, tests et bonnes pratiques pour livrer des solutions fiables.</p>
               <div className="mt-4 flex flex-wrap gap-2">
-                {['Tests', 'Scalabilité', 'Maintenance'].map(t => <span key={t} className="text-xs px-2 py-1 rounded-full bg-white/5 text-white/60">{t}</span>)}
+                {['Tests', 'Clean code', 'Maintenance'].map(t => <span key={t} className="text-xs px-2 py-1 rounded-full bg-white/5 text-white/60">{t}</span>)}
               </div>
             </div>
 
