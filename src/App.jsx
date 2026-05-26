@@ -304,7 +304,7 @@ export default function App() {
           </div>
         </header>
 
-        <section className="min-h-screen flex flex-col section-visible text-center px-6 relative items-center justify-center pt-28 pb-12">
+        <section className="min-h-screen flex flex-col section-visible text-center px-6 relative items-center justify-center pt-[calc(7rem+0.7cm)] pb-12">
           <h1 className="leading-[0.95] font-semibold text-white tracking-tight pb-8" style={{ animation: 'titleEmergence 1.8s ease-out both' }}>
             <span className="block text-[10vw] sm:text-7xl lg:text-8xl text-center">
               <span className="flex w-full items-center justify-center gap-4 sm:gap-6">
