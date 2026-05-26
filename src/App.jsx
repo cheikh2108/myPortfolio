@@ -543,7 +543,7 @@ export default function App() {
               <h3 className="text-xl font-semibold text-white tracking-tight">Base de données</h3>
               <p className="mt-2 text-sm text-white/70">Gestion fiable et structurée des données.</p>
               <div className="mt-4 flex flex-wrap gap-2">
-                {['MySQL'].map(skill => <span key={skill} className="text-xs px-2 py-1 rounded-full bg-white/5 text-white/60">{skill}</span>)}
+                {['MySQL', 'Supabase'].map(skill => <span key={skill} className="text-xs px-2 py-1 rounded-full bg-white/5 text-white/60">{skill}</span>)}
               </div>
             </div>
 
