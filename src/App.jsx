@@ -304,7 +304,7 @@ export default function App() {
           </div>
         </header>
 
-        <section className="min-h-screen flex flex-col section-visible text-center px-6 relative items-center justify-center pt-24 pb-12">
+        <section className="min-h-screen flex flex-col section-visible text-center px-6 relative items-center justify-center pt-28 pb-12">
           <h1 className="leading-[0.95] font-semibold text-white tracking-tight pb-8" style={{ animation: 'titleEmergence 1.8s ease-out both' }}>
             <span className="block text-[10vw] sm:text-7xl lg:text-8xl text-center">
               <span className="flex w-full items-center justify-center gap-4 sm:gap-6">
@@ -362,7 +362,7 @@ export default function App() {
               <span className="text-xs text-white/70">Projets sélectionnés</span>
             </div>
             <h2 className="md:text-6xl text-4xl font-semibold text-white tracking-tight mt-5 drop-shadow-xl">
-              Réalisations web
+               Mes réalisations web
             </h2>
             <p className="text-base md:text-lg text-white/70 mt-4">
               Une sélection de projets web conçus pour être rapides, clairs et utiles.
