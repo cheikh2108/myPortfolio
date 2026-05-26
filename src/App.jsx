@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import TypeWords from './components/TypeWords';
 import AboutSection from './components/AboutSection';
+import ScrollToTop from './components/ScrollToTop';
 import myProfileface from './images/myProfileface.webp';
 import studyMatiere from './images/study-matiere.webp';
 import todolist from './images/todolist.webp';
@@ -693,6 +694,7 @@ export default function App() {
         </div>
       </footer>
       </main>
+      <ScrollToTop />
     </>
   );
 }
