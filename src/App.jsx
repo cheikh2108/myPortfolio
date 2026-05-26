@@ -135,9 +135,40 @@ export default function App() {
       <main id="main-content">
       <div ref={heroContainerRef} className="overflow-hidden relative" id="top">
         <div ref={heroParallaxRef} className="hero-parallax-layer absolute inset-0 -z-10 pointer-events-none overflow-hidden" aria-hidden="true">
-          <div className="hero-orb" style={{ width: '70vw', height: '70vw', maxWidth: 900, maxHeight: 900, top: '-20%', left: '-15%', background: 'radial-gradient(circle, rgba(56,189,248,0.18) 0%, rgba(99,102,241,0.12) 40%, transparent 70%)', animation: 'orbFloat1 18s ease-in-out infinite' }}></div>
-          <div className="hero-orb" style={{ width: '55vw', height: '55vw', maxWidth: 700, maxHeight: 700, top: '10%', right: '-10%', background: 'radial-gradient(circle, rgba(168,85,247,0.16) 0%, rgba(99,102,241,0.1) 45%, transparent 70%)', animation: 'orbFloat2 22s ease-in-out infinite' }}></div>
-          <div className="hero-orb" style={{ width: '40vw', height: '40vw', maxWidth: 560, maxHeight: 560, bottom: '-10%', left: '30%', background: 'radial-gradient(circle, rgba(34,211,238,0.13) 0%, rgba(56,189,248,0.08) 50%, transparent 70%)', animation: 'orbFloat3 26s ease-in-out infinite' }}></div>
+          {[
+            { top: '8%',  left: '12%',  size: 2.5, dur: 14, delay: 0,    opacity: 0.7 },
+            { top: '18%', left: '72%',  size: 1.5, dur: 18, delay: 2,    opacity: 0.5 },
+            { top: '32%', left: '88%',  size: 2,   dur: 22, delay: 1,    opacity: 0.6 },
+            { top: '55%', left: '5%',   size: 1.5, dur: 16, delay: 3.5,  opacity: 0.45 },
+            { top: '70%', left: '60%',  size: 2,   dur: 20, delay: 1.5,  opacity: 0.55 },
+            { top: '80%', left: '25%',  size: 1.5, dur: 24, delay: 0.5,  opacity: 0.4 },
+            { top: '45%', left: '50%',  size: 1,   dur: 12, delay: 4,    opacity: 0.35 },
+            { top: '25%', left: '38%',  size: 2,   dur: 19, delay: 2.5,  opacity: 0.5 },
+            { top: '62%', left: '82%',  size: 1.5, dur: 17, delay: 1,    opacity: 0.4 },
+            { top: '12%', left: '52%',  size: 1,   dur: 21, delay: 3,    opacity: 0.3 },
+            { top: '88%', left: '45%',  size: 2,   dur: 15, delay: 0.8,  opacity: 0.5 },
+            { top: '40%', left: '18%',  size: 1.5, dur: 25, delay: 1.8,  opacity: 0.45 },
+            { top: '5%',  left: '82%',  size: 1,   dur: 13, delay: 2.2,  opacity: 0.35 },
+            { top: '75%', left: '38%',  size: 2.5, dur: 23, delay: 0.3,  opacity: 0.6 },
+            { top: '52%', left: '68%',  size: 1,   dur: 11, delay: 4.5,  opacity: 0.3 },
+            { top: '93%', left: '15%',  size: 1.5, dur: 26, delay: 1.2,  opacity: 0.4 },
+            { top: '3%',  left: '30%',  size: 2,   dur: 16, delay: 3.8,  opacity: 0.5 },
+            { top: '35%', left: '95%',  size: 1,   dur: 20, delay: 0.6,  opacity: 0.35 },
+          ].map((s, i) => (
+            <span
+              key={i}
+              className="hero-star"
+              style={{
+                top: s.top,
+                left: s.left,
+                width: `${s.size}px`,
+                height: `${s.size}px`,
+                '--star-opacity': s.opacity,
+                animationDuration: `${s.dur}s`,
+                animationDelay: `${s.delay}s`,
+              }}
+            />
+          ))}
         </div>
 
         <header className="fixed z-20 bg-black/50 w-full top-0 backdrop-blur-xl" style={{ animation: 'fadeSlideIn 0.5s ease-in-out 0.1s both' }}>
