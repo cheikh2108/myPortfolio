@@ -3,12 +3,12 @@ import TypeWords from './components/TypeWords';
 import AboutSection from './components/AboutSection';
 import ScrollToTop from './components/ScrollToTop';
 import myProfileface from './images/myProfileface.webp';
-import studyMatiere from './images/study-matiere.webp';
+import studyMatiere from './images/study-planner-dashboard.webp';
 import todolist from './images/todolist.webp';
-import tackoMenu from './images/tacko-menu.webp';
-import difashionCollection from './images/difashion-collection.webp';
-import cloudFichier from './images/cloud-fichier.webp';
-import voteSection from './images/vote-section.webp';
+import tackoMenu from './images/tackodelices-hero-section.webp';
+import difashionCollection from './images/djifashion-hero.webp';
+import cloudFichier from './images/cloud-dashboard.webp';
+import voteSection from './images/vote-hero.jpeg';
 
 const STARS = [
   { top: '8%',  left: '12%',  size: 2.5, dur: 4,  delay: 0,    opacity: 0.75, bright: true  },
