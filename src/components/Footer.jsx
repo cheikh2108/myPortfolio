@@ -55,7 +55,7 @@ export default function Footer() {
               <ul className="space-y-3">
                 <li className="flex items-start gap-2 text-sm text-white/60">
                   <iconify-icon icon="solar:letter-linear" width="16" height="16" class="mt-0.5 flex-shrink-0"></iconify-icon>
-                  <a href="mailto:bcdiakhate2108@gmail.com" className="hover:text-white transition">bcdiakhate2108@gmail.com</a>
+                  <a href="mailto:cheikh.dev21@gmail.com" className="hover:text-white transition">cheikh.dev21@gmail.com</a>
                 </li>
                 <li className="flex items-start gap-2 text-sm text-white/60">
                   <iconify-icon icon="solar:phone-linear" width="16" height="16" class="mt-0.5 flex-shrink-0"></iconify-icon>

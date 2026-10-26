@@ -65,4 +65,4 @@ Ce projet est libre d'utilisation.
 
 ## 👤 Auteur
 
-Baye Cheikh Diakhate - bcdiakhate2108@gmail.com
+Baye Cheikh Diakhate - cheikh.dev21@gmail.com

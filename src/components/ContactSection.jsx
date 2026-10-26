@@ -18,7 +18,7 @@ export default function ContactSection() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 items-center justify-center mb-8">
             <a
-              href="mailto:bcdiakhate2108@gmail.com"
+              href="mailto:cheikh.dev21@gmail.com"
               className="inline-flex items-center gap-2 border-gradient before:rounded-full hover:opacity-90 transition text-sm font-semibold text-black bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full px-6 py-3 shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)]"
             >
               Démarrer un projet
