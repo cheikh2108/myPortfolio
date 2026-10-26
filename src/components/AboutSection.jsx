@@ -44,10 +44,10 @@ export default function AboutSection() {
                   <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center border-gradient before:rounded-lg text-blue-400">
                     <iconify-icon icon="solar:medal-star-linear" width="20" height="20"></iconify-icon>
                   </div>
-                  <h3 className="text-lg font-semibold">2+ ans</h3>
+                  <h3 className="text-lg font-semibold">3 plateformes SaaS</h3>
                 </div>
                 <p className="text-sm text-white/60">
-                  Expérience orientée développement web et produits digitaux
+                  Gestion Immo, Planora360 et SatisClient, conçues du backend à l'interface
                 </p>
               </div>
 

@@ -127,7 +127,7 @@ export default function HeroSection() {
         <div className="flex flex-wrap text-xs text-white/60 mt-16 xl:mt-24 gap-x-6 gap-y-6 items-center justify-center" style={{ animation: 'fadeSlideIn 0.5s ease-in-out 0.5s both' }}>
           <span className="inline-flex items-center gap-1.5">
             <iconify-icon icon="solar:clock-circle-linear" width="16" height="16" class="text-white"></iconify-icon>
-            2+ ans d'expérience
+            5 projets en ligne
           </span>
           <span className="inline-flex items-center gap-1.5">
             <iconify-icon icon="solar:case-linear" width="16" height="16" class="text-white"></iconify-icon>

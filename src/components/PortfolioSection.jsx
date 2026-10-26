@@ -1,25 +1,33 @@
 import React, { useState } from 'react';
-import studyMatiere from '../images/study-planner-dashboard.webp';
-import todolist from '../images/todolist.webp';
+import gestionImmo from '../images/gestion-immo-dashboard.webp';
+import planora from '../images/planora360-accueil.webp';
+import satisclient from '../images/satisclient-dashboard.webp';
+import ataaba from '../images/ataaba-accueil.webp';
+import jamra from '../images/ong-jamra-accueil.webp';
 import tackoMenu from '../images/tackodelices-hero-section.webp';
+import voteSection from '../images/vote-hero.jpeg';
+import studyMatiere from '../images/study-planner-dashboard.webp';
 import difashionCollection from '../images/djifashion-hero.webp';
 import cloudFichier from '../images/cloud-dashboard.webp';
-import voteSection from '../images/vote-hero.jpeg';
 
 const portfolioItems = [
-  { cat: 'product',   img: studyMatiere,       title: 'MyStudyPlanner',    desc: 'Gestion de tâches académiques • 2026',                                                                                           tags: ['React', 'Vite', 'Tailwind'],                    github: 'https://github.com/cheikh2108/MyStudyPlanner',      site: 'https://mystudyplanner.appwrite.network/' },
-  { cat: 'product',   img: todolist,           title: 'TodoList',          desc: 'Application de gestion de tâches simple, rapide et responsive • 2026',                                                          tags: ['First Project', 'React', 'Appwrite'],           github: 'https://github.com/cheikh2108/todolist-react',      site: 'https://todolist-react.appwrite.network' },
-  { cat: 'product',   img: tackoMenu,          title: 'Tacko Délices',     desc: 'Application web de restaurant avec gestion en temps réel • 2026',                                                               tags: ['React', 'Supabase'],                            github: 'https://github.com/cheikh2108/Tacko-delices',       site: 'https://www.tackodelices.foo' },
-  { cat: 'wordpress', img: difashionCollection,title: 'DJI Fashion',       desc: 'Boutique mode élégante avec catalogue produits, gestion panier et paiement sécurisé • 2026',                                   tags: ['WordPress', 'WooCommerce', 'E-commerce'],                                                                    site: 'https://djifashion.com/' },
-  { cat: 'devops',    img: cloudFichier,       title: 'Arsonry Local Cloud',desc: 'Système de mini-cloud interne fournissant DNS, SMB, FTP, HTTP, bases de données et interface de gestion de fichiers avec quotas.', tags: ['Docker', 'DevOps'],                           github: 'https://github.com/ibzocraft/arsonry-local-cloud' },
-  { cat: 'product',   img: voteSection,        title: 'Plateforme-vote',   desc: "Plateforme électorale sécurisée et anonyme pour les établissements avec vérification d'accès, scrutin anonyme et suivi administratif en temps réel • 2026", tags: ['Next.js', 'TypeScript', 'Supabase'], github: 'https://github.com/cheikh2108/Plateforme-vote', site: 'https://plateforme-vote.vercel.app' },
+  { cat: 'saas',      img: gestionImmo,        title: 'Gestion Immo',       desc: "Plateforme SaaS de gestion locative pour plusieurs agences : 6 espaces par rôle, paiement du loyer par mobile money, quittances PDF automatiques, incidents et états des lieux. 21 suites de tests automatiques. Projet de fin d'études • 2026", tags: ['NestJS', 'Next.js', 'PostgreSQL', 'Prisma', 'Docker'] },
+  { cat: 'saas',      img: planora,            title: 'Planora360',         desc: 'Plateforme SaaS de pilotage de projets pour ONG et PME : plans d\'action, indicateurs, budgets, passation de marchés et messagerie en temps réel • 2026', tags: ['NestJS', 'Next.js', 'PostgreSQL', 'Socket.io'], site: 'https://planora360.org/' },
+  { cat: 'saas',      img: satisclient,        title: 'SatisClient',        desc: 'Plateforme B2B de satisfaction client : avis, réclamations avec suivi et délais, enquêtes, QR codes et tableaux de bord multi-sites • 2026', tags: ['NestJS', 'Next.js', 'PostgreSQL', 'Prisma'], site: 'https://satisclient.org/' },
+  { cat: 'client',    img: ataaba,             title: 'ATAABA Expertise',   desc: "Site d'un cabinet de gestion de projets et de solutions digitales : services, formations et blog • 2026", tags: ['Next.js', 'TypeScript', 'GSAP'], site: 'https://ataabaexpertise.org' },
+  { cat: 'client',    img: jamra,              title: 'ONG Jamra',          desc: "Site officiel d'une ONG sénégalaise fondée en 1982 : domaines d'intervention, programmes et histoire • 2026", tags: ['Next.js', 'TypeScript', 'Tailwind'], site: 'https://ongjamra.ong/' },
+  { cat: 'client',    img: tackoMenu,          title: 'Tacko Délices',      desc: 'Application web de restaurant avec gestion en temps réel • 2026', tags: ['React', 'Supabase'], github: 'https://github.com/cheikh2108/Tacko-delices', site: 'https://www.tackodelices.foo' },
+  { cat: 'product',   img: voteSection,        title: 'Plateforme-vote',    desc: "Plateforme électorale sécurisée et anonyme pour les établissements avec vérification d'accès, scrutin anonyme et suivi administratif en temps réel • 2026", tags: ['Next.js', 'TypeScript', 'Supabase'], github: 'https://github.com/cheikh2108/Plateforme-vote', site: 'https://plateforme-vote.vercel.app' },
+  { cat: 'product',   img: studyMatiere,       title: 'MyStudyPlanner',     desc: 'Gestion de tâches académiques • 2026', tags: ['React', 'Vite', 'Tailwind'], github: 'https://github.com/cheikh2108/MyStudyPlanner', site: 'https://mystudyplanner.appwrite.network/' },
+  { cat: 'client',    img: difashionCollection,title: 'DJI Fashion',        desc: 'Boutique mode élégante avec catalogue produits, gestion panier et paiement sécurisé • 2026', tags: ['WordPress', 'WooCommerce', 'E-commerce'], site: 'https://djifashion.com/' },
+  { cat: 'product',   img: cloudFichier,       title: 'Arsonry Local Cloud',desc: 'Système de mini-cloud interne fournissant DNS, SMB, FTP, HTTP, bases de données et interface de gestion de fichiers avec quotas.', tags: ['Docker', 'DevOps'], github: 'https://github.com/ibzocraft/arsonry-local-cloud' },
 ];
 
 const portfolioFilters = [
-  { value: 'all',       label: 'Tous' },
-  { value: 'product',   label: 'Applications web' },
-  { value: 'devops',    label: 'Docker & déploiement' },
-  { value: 'wordpress', label: 'WordPress & e-commerce' },
+  { value: 'all',     label: 'Tous' },
+  { value: 'saas',    label: 'Plateformes SaaS' },
+  { value: 'client',  label: 'Sites clients' },
+  { value: 'product', label: 'Autres projets' },
 ];
 
 export default function PortfolioSection() {
